@@ -2,7 +2,7 @@ import java.util.*;
 
 public class verifyItemCompleted(){
     public static void main(String args[]){
-        WebDriverManager m=new WebDriverManager(System.getDriver());
+        WebDriverManager.ChromeDriver.setup();
         WebDriver driver=new ChromeDriver();
         driver.window.maximize();
         driver.get("https://todomvc.com/examples/angular/dist/browser/#/all");
@@ -32,7 +32,7 @@ public class verifyItemCompleted(){
         else{
             System.out.println("Crossed out and Clear complete button not displayed");
         }
-        
+         driver.quit();
 
 
 
